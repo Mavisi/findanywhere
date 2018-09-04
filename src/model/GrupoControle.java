@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import model.interfaces.Rastreavel;
@@ -18,13 +19,13 @@ public class GrupoControle {
         this.id = id;
     }
     public List<Rastreavel> getRastreaveis() {
-        return rastreaveis;
+        return Collections.unmodifiableList(rastreaveis);
     }    
     public void addRastreavel(Rastreavel rastreavel) {
         this.rastreaveis.add(rastreavel);
     }
     public List<Area> getAreasPermitidas() {
-        return areasPermitidas;
+        return Collections.unmodifiableList(areasPermitidas);
     }
     public void addArea(Area area) {
         this.areasPermitidas.add(area);
