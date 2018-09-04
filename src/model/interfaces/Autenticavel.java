@@ -2,5 +2,5 @@ package model.interfaces;
 
 public interface Autenticavel {
     
-    public boolean autenticar();
+    public boolean autenticar(String senha);
 }
