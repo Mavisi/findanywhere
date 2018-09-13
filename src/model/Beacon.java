@@ -3,6 +3,7 @@ package model;
 public class Beacon {
     
     private int id;
+    private TipoBeacon tipoBeacon;
     private String uuid;
     private int major;
     private int minor;
@@ -13,6 +14,12 @@ public class Beacon {
     }
     public void setId(int id) {
         this.id = id;
+    }
+    public TipoBeacon getTipoBeacon() {
+        return tipoBeacon;
+    }
+    public void setTipoBeacon(TipoBeacon tipoBeacon) {
+        this.tipoBeacon = tipoBeacon;
     }
     public String getUuid() {
         return uuid;
