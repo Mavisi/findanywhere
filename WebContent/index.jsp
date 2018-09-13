@@ -17,14 +17,14 @@
     <form class="form-signin" method="post">
         <img src="img/logo.png" alt="" width="80" height="80">
         <span class="mb-4" style="display:block;">FindAnywhere</span>
-
-        <label for="nomeUsuario" class="sr-only">Nome de usuÃ¡rio</label>
-        <input type="text" name="nomeUsuario" class="form-control" placeholder="Nome de usuÃ¡rio" required autofocus>
+        
+        <label for="nomeUsuario" class="sr-only">Nome de usuário</label>
+        <input type="text" name="nomeUsuario" class="form-control" placeholder="Nome de usuário" required autofocus>
         <label for="senha" class="sr-only">Senha</label>
         <input type="password" name="senha" class="form-control" placeholder="Senha" required>
 
         <div class="ml-1" style="display:flex;justify-content:flex-start;">
-            <small id="passwordHelpBlock" class="form-text text-muted">
+            <small class="form-text text-muted">
             <a href="#">Esqueceu sua senha?</a>
             </small>
         </div>
@@ -33,7 +33,7 @@
             <button class="btn btn-primary" type="submit">entrar</button>
         </div>
 
-        <p class="mt-3">NÃ£o tenha uma conta? <a href="#">Cadastra-se</a></p>
+        <p class="mt-3">Não tenha uma conta? <a href="#">Cadastra-se</a></p>
     </form>
 </body>
 

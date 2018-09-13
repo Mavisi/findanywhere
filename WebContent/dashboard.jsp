@@ -55,7 +55,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <span data-feather="bar-chart-2"></span>
-                                √Åreas de controle
+                                ¡reas de controle
                             </a>
                         </li>
                         <li class="nav-item">
