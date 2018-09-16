@@ -4,7 +4,7 @@ public class TipoBeacon {
     
     private int id;
     private String descricao;
-    private String codigo;
+    private String layout;
     
     public int getId() {
         return id;
@@ -18,11 +18,11 @@ public class TipoBeacon {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public String getCodigo() {
-        return codigo;
+    public String getLayout() {
+        return layout;
     }
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setLayout(String layout) {
+        this.layout = layout;
     }
-    
+
 }
