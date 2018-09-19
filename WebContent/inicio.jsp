@@ -24,7 +24,7 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Início</a>
+                        <a href="inicio.jsp" class="nav-link active">Início</a>
                     </li>
 					
 					<li class="nav-item dropdown">
@@ -53,7 +53,7 @@
                        </a>
                        
                        <div class="dropdown-menu">
-                           <a href="#" class="dropdown-item">Tipo de Beacons</a>
+                           <a href="tipobeacon.jsp" class="dropdown-item">Tipo de Beacons</a>
                            <a href="#" class="dropdown-item">Beacon</a>
                        </div>
                        
