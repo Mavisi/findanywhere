@@ -24,7 +24,7 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#" class="nav-link active">Início</a>
                     </li>
 					
 					<li class="nav-item dropdown">
