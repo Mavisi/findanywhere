@@ -54,7 +54,7 @@
                        
                        <div class="dropdown-menu">
                            <a href="tipobeacon.jsp" class="dropdown-item">Tipo de Beacons</a>
-                           <a href="#" class="dropdown-item">Beacon</a>
+                           <a href="beacon.jsp" class="dropdown-item">Beacon</a>
                        </div>
                        
                     </li>

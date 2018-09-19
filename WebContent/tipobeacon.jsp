@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Áreas</a>
+                        <a href="area.jsp" class="nav-link">Áreas</a>
                     </li>
                     
                     <li class="nav-item dropdown">
@@ -53,8 +53,8 @@
                        </a>
                        
                        <div class="dropdown-menu">
-                           <a href="#" class="dropdown-item">Tipo de Beacons</a>
-                           <a href="#" class="dropdown-item">Beacon</a>
+                           <a href="tipobeacon.jsp" class="dropdown-item">Tipo de Beacons</a>
+                           <a href="beacon.jsp" class="dropdown-item">Beacon</a>
                        </div>
                        
                     </li>
