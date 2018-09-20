@@ -33,7 +33,7 @@
                        </a>
                        
                        <div class="dropdown-menu">
-                           <a href="#" class="dropdown-item">Tipos de Pessoas</a>
+                           <a href="tipopessoa.jsp" class="dropdown-item">Tipos de Pessoas</a>
                            <a href="#" class="dropdown-item">Pessoa</a>
                        </div>
                        
@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Áreas</a>
+                        <a href="area.jsp" class="nav-link">Áreas</a>
                     </li>
                     
                     <li class="nav-item dropdown active">

@@ -28,7 +28,7 @@
                     </li>
                     
                     <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                       <a class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown">
                            Pessoas
                        </a>
                        
@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="area.jsp" class="nav-link active">Áreas</a>
+                        <a href="area.jsp" class="nav-link">Áreas</a>
                     </li>
                     
                     <li class="nav-item dropdown">
@@ -53,7 +53,7 @@
                        </a>
                        
                        <div class="dropdown-menu">
-                           <a href="tipobeacon.jsp" class="dropdown-item">Tipo de Beacons</a>
+                           <a href="tipobeacon.jsp" class="dropdown-item active">Tipo de Beacons</a>
                            <a href="beacon.jsp" class="dropdown-item">Beacon</a>
                        </div>
                        
@@ -76,16 +76,16 @@
     
     <section>
         <div class="container mt-4">
-            <h1 class="h2">Áreas</h1>
+            <h1 class="h2">Tipos de Pessoas</h1>
             
             <a class="btn btn-primary mt-3" data-toggle="collapse" href="#cadastro" role="button" aria-expanded="false">
-                Cadastrar Área
+                Cadastrar Tipos de Pessoa
             </a>
         
             <div class="collapse mt-2 col-md-6 mx-auto" id="cadastro">
                 <div class="card card-body">
                     
-                    <h4 class="h5 text-center">Cadastro de Área</h4>
+                    <h4 class="h5 text-center">Cadastro de Tipo de Pessoa</h4>
                     
                     <form method="post" action="/">
     
@@ -93,7 +93,7 @@
                             <label for="descricao">Descrição</label>
                             <input class="form-control" type="text" name="descricao">    
                         </div>
-                        
+    
                         <div class="d-flex justify-content-end">
                            <button type="submit" class="btn btn-primary">cadastrar</button>
                         </div>
@@ -105,15 +105,13 @@
                 <thead>
                     <tr>
                         <th>Descricao</th>
-                        <th>Beacons</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 
                 <tbody>
                     <tr>
-                        <td>Administração</td>
-                        <td></td>
+                        <td>Gerente</td>
                         <td>
                             <a href="#" class="btn btn-info">Editar</a>
                             <a href="#" class="btn btn-danger">Excluir</a>
@@ -121,8 +119,7 @@
                     </tr>
                     
                     <tr>
-                        <td>Contabilidade</td>
-                        <td></td>
+                        <td>Funcionário</td>
                         <td>
                             <a href="#" class="btn btn-info">Editar</a>
                             <a href="#" class="btn btn-danger">Excluir</a>
@@ -130,23 +127,13 @@
                     </tr>
 
                     <tr>
-                        <td>Almoxarifado</td>
-                        <td></td>
+                        <td>Visitante</td>
                         <td>
                             <a href="#" class="btn btn-info">Editar</a>
                             <a href="#" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
 
-                    <tr>
-                        <td>Diretoria</td>
-                        <td></td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                    
                 </tbody>
                 
             </table>
