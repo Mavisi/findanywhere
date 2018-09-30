@@ -34,7 +34,7 @@
                        
                        <div class="dropdown-menu">
                            <a href="tipopessoa.jsp" class="dropdown-item">Tipos de Pessoas</a>
-                           <a href="#" class="dropdown-item">Pessoa</a>
+                           <a href="pessoa.jsp" class="dropdown-item">Pessoa</a>
                        </div>
                        
                     </li>
@@ -88,6 +88,12 @@
                     <h4 class="h5 text-center mb-4">Cadastro de Beacon</h4>
                     
                     <form method="post" action="/">
+
+                        <div class="form-group">
+                            <label for="uuid">UUID</label>
+                            <input class="form-control" type="text" name="uuid">    
+                        </div>
+                        
                         <div class="form-group">
 	                        <label>Tipo do Beacon</label>
 							<select name="tipoBeacon" class="custom-select">
@@ -108,10 +114,6 @@
                             </select>  
                         </div>
                         
-                        <div class="form-group">
-                            <label for="uuid">UUID</label>
-                            <input class="form-control" type="text" name="uuid">    
-                        </div>
 
                         <div class="form-group">
                             <label for="major">Major</label>
@@ -135,55 +137,37 @@
                 </div>
             </div>
             
+            <div class="table-responsive">
             <table class="mt-3 table table table-striped">
                 <thead>
                     <tr>
-                        <th>Descricao</th>
-                        <th>Beacons</th>
+                        <th>UUID</th>
+                        <th>Tipo do Beacon</th>
+                        <th>Área do Beacon</th>
+                        <th>Major</th>
+                        <th>Minor</th>
+                        <th>TxPower</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 
                 <tbody>
                     <tr>
+                        <td>3d0ca315-aff9–4fc2-be61–3b76b9a2d798</td>
+                        <td>AltBeacon</td>
                         <td>Administração</td>
-                        <td></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-65</td>
                         <td>
                             <a href="#" class="btn btn-info">Editar</a>
                             <a href="#" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
-                    
-                    <tr>
-                        <td>Contabilidade</td>
-                        <td></td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Almoxarifado</td>
-                        <td></td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Diretoria</td>
-                        <td></td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                    
                 </tbody>
                 
             </table>
+            </div>
             
         </div>
     </section>

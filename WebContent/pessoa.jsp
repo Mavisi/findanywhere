@@ -126,6 +126,7 @@
                 </div>
             </div>
             
+            <div class="table-responsive">
             <table class="mt-3 table table table-striped">
                 <thead>
                     <tr>
@@ -154,6 +155,7 @@
                 </tbody>
                 
             </table>
+            </div>
             
         </div>
     </section>

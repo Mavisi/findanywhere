@@ -34,7 +34,7 @@
 					   
 					   <div class="dropdown-menu">
 					       <a href="tipopessoa.jsp" class="dropdown-item">Tipos de Pessoas</a>
-					       <a href="#" class="dropdown-item">Pessoa</a>
+					       <a href="pessoa.jsp" class="dropdown-item">Pessoa</a>
 					   </div>
 					   
 					</li>
