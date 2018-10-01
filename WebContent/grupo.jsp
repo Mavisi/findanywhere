@@ -29,13 +29,13 @@
                     </li>
                     
                     <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                            Pessoas
                        </a>
                        
                        <div class="dropdown-menu">
                            <a href="tipopessoa.jsp" class="dropdown-item">Tipos de Pessoas</a>
-                           <a href="#" class="dropdown-item">Pessoa</a>
+                           <a href="pessoa.jsp" class="dropdown-item">Pessoa</a>
                        </div>
                        
                     </li>
@@ -45,7 +45,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="area.jsp" class="nav-link">Áreas</a>
+                        <a href="area.jsp" class="nav-link active">Áreas</a>
                     </li>
                     
                     <li class="nav-item dropdown">
@@ -77,49 +77,35 @@
     
     <section>
         <div class="container mt-4">
-            <h1 class="h2">Pessoas</h1>
+            <h1 class="h2">Grupos de Controle</h1>
             
             <a class="btn btn-primary mt-3" data-toggle="collapse" href="#cadastro" role="button" aria-expanded="false">
-                Cadastrar Pessoa
+                Cadastrar Grupo de Controle
             </a>
         
             <div class="collapse mt-2 col-md-6 mx-auto" id="cadastro">
                 <div class="card card-body">
                     
-                    <h4 class="h5 text-center">Cadastro de Pessoa</h4>
+                    <h4 class="h5 text-center">Cadastro de Grupo de Controle</h4>
                     
                     <form method="post" action="/">
-                        
+    
                         <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input class="form-control" type="text" name="nome">    
+                            <label for="descricao">Descrição</label>
+                            <input class="form-control" type="text" name="descricao">    
                         </div>
                         
                         <div class="form-group">
-                            <label>Tipo de pessoa</label>
-                            <select name="tipoPessoa" class="selectpicker" data-width="100%">
-                                <option>Selecione</option>
-                                <option>Funcionário</option>
-                                <option>Gerente</option>
-                                <option>Visitante</option>
+                            <label>Áreas permitidas</label>
+                            <select name="areasPermitidas" class="selectpicker" multiple="multiple" data-live-search="true" data-size="5" data-width="100%" title="Selecione as áreas permitidas"  data-selected-text-format="count > 3">
+                                <option>Administração</option>
+                                <option>Contabilidade</option>
+                                <option>Almoxarifado</option>
+                                <option>Diretoria</option>
+                                <option>Produção</option>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="cpf">CPF</label>
-                            <input class="form-control" type="text" name="cpf">    
-                        </div>
-
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input class="form-control" type="text" name="telefone">    
-                        </div>
-
-                        <div class="form-group">
-                            <label for="enderecoBluetooth">Endereço Bluetooth</label>
-                            <input class="form-control" type="text" name="enderecoBluetooth">    
-                        </div>
-    
+                        
                         <div class="d-flex justify-content-end">
                            <button type="submit" class="btn btn-primary">cadastrar</button>
                         </div>
@@ -131,28 +117,22 @@
             <table class="mt-3 table table table-striped">
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Tipo de pessoa</th>
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Endereço Bluetooth</th>
+                        <th>Descricao</th>
+                        <th>Áreas permitidas</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 
                 <tbody>
                     <tr>
-                        <td>Marcos Vinicius</td>
-                        <td>Gerente</td>
-                        <td>123.321.024-45</td>
-                        <td>(71) 99999-9999</td>
-                        <td>00-04-61-02-AA-FF</td>
+                        
+                        <td>Funcionários da linha de produção</td>
+                        <td>Produção e Almoxarifado</td>
                         <td>
                             <a href="#" class="btn btn-info">Editar</a>
                             <a href="#" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
-                    
                 </tbody>
                 
             </table>
@@ -166,7 +146,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/defaults-pt_BR.min.js"></script>
-    
 </body>
 
 </html>

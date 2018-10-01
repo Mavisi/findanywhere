@@ -10,6 +10,7 @@
     <title>FindAnywhere</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Grupos de Controle</a>
+                        <a href="grupo.jsp" class="nav-link">Grupos de Controle</a>
                     </li>
 
                     <li class="nav-item">
@@ -96,7 +97,7 @@
                         
                         <div class="form-group">
 	                        <label>Tipo do Beacon</label>
-							<select name="tipoBeacon" class="custom-select">
+							<select name="tipoBeacon" class="selectpicker" data-width="100%">
 								<option selected>Selecione</option>
 								<option value="1">AltBeacon</option>
 								<option value="2">iBeacon</option>
@@ -106,7 +107,7 @@
 
                         <div class="form-group">
                             <label>Área do Beacon</label>
-                            <select name="area" class="custom-select">
+                            <select name="area" class="selectpicker" data-width="100%">
                                 <option selected>Selecione</option>
                                 <option value="1">Administração</option>
                                 <option value="2">Contabilidade</option>
@@ -175,6 +176,8 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js" ></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/defaults-pt_BR.min.js"></script>
     
 </body>
 

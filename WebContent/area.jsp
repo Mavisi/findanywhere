@@ -40,7 +40,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Grupos de Controle</a>
+                        <a href="grupo.jsp" class="nav-link">Grupos de Controle</a>
                     </li>
 
                     <li class="nav-item">
