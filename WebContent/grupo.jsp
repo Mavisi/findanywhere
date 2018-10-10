@@ -41,11 +41,11 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a href="grupo.jsp" class="nav-link">Grupos de Controle</a>
+                        <a href="grupo.jsp" class="nav-link active">Grupos de Controle</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="area.jsp" class="nav-link active">Áreas</a>
+                        <a href="area.jsp" class="nav-link">Áreas</a>
                     </li>
                     
                     <li class="nav-item dropdown">
