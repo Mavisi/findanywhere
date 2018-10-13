@@ -87,7 +87,7 @@
                     
                     <h4 class="h5 text-center">Cadastro de Tipo de Beacon</h4>
                     
-	                <form method="post" action="/">
+	                <form method="post" action="adicionatipobeacon">
 	
 	                    <div class="form-group">
 	                        <label for="descricao">Descrição</label>
