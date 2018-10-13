@@ -1,12 +1,33 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="beacons")
 public class Beacon {
     
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="idbeacon")
     private int id;
+    @ManyToOne
+    @JoinColumn(name="idtipo_beacon")
     private TipoBeacon tipoBeacon;
+    @ManyToOne
+    @JoinColumn(name="idarea")
+    private Area areaBeacon;
+    @Column(length=36)
     private String uuid;
     private int major;
     private int minor;
+    @Column(name="tx_power")
     private int txPower;
     
     public int getId() {
@@ -44,6 +65,12 @@ public class Beacon {
     }
     public void setTxPower(int txPower) {
         this.txPower = txPower;
+    }
+    public Area getAreaBeacon() {
+        return areaBeacon;
+    }
+    public void setAreaBeacon(Area areaBeacon) {
+        this.areaBeacon = areaBeacon;
     }
     
 }

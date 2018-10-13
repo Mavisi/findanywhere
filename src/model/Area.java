@@ -4,10 +4,25 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="areas")
 public class Area {
     
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="idarea")
     private int id;
     private String descricao;
+    @OneToMany(mappedBy = "areaBeacon", fetch = FetchType.EAGER)
     private List<Beacon> beacons = new ArrayList<Beacon>();
     
     public int getId() {

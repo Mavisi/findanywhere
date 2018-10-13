@@ -4,21 +4,51 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 import model.interfaces.Autenticavel;
 
+@Entity
+@Table(name = "empresas")
 public class Empresa implements Autenticavel {
     
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="idempresa")
     private int id;
     private String cnpj;
+    @Column(name="razao_social")
     private String razaoSocial;
+    @Column(name="nome_fantasia")
+    private String nomeFantasia;
+    @Column(name="inscricao_estadual", length=12)
     private String inscricaoEstadual;
+    @Column(length=14)
     private String telefone;
+    @OneToOne
+    @JoinColumn(name="idendereco")
     private Endereco endereco;
+    @Column(name="nome_usuario", length=8)
     private String nomeUsuario;
     private String email;
+    @Column(length=12)
     private String senha;
+    @OneToMany
+    @JoinColumn(name="idempresa")
     private List<Area> areas = new ArrayList<Area>();
+    @OneToMany
+    @JoinColumn(name="idempresa")
     private List<Pessoa> pessoas = new ArrayList<Pessoa>();
+    @OneToMany
+    @JoinColumn(name="idempresa")
     private List<GrupoControle> grupoControles = new ArrayList<GrupoControle>();
     
     public int getId() {
@@ -38,6 +68,12 @@ public class Empresa implements Autenticavel {
     }
     public void setRazaoSocial(String razaoSocial) {
         this.razaoSocial = razaoSocial;
+    }
+    public String getNomeFantasia() {
+        return nomeFantasia;
+    }
+    public void setNomeFantasia(String nomeFantasia) {
+        this.nomeFantasia = nomeFantasia;
     }
     public String getInscricaoEstadual() {
         return inscricaoEstadual;

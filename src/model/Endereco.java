@@ -1,13 +1,27 @@
 package model;
 
-public class Endereco {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="enderecos")
+public class Endereco {
+    
+    @Id
+    @Column(name="idendereco")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
+    @Column(length=8)
     private String cep;
     private String logradouro;
     private String complemento;
     private String bairro;
     private String cidade;
+    @Column(length=2)
     private String uf;
     
     public int getId() {
