@@ -16,7 +16,7 @@ public class TipoBeaconDAO {
     public List<TipoBeacon> getTiposBeacon() {
         List<TipoBeacon> tipoBeacons = new ArrayList<TipoBeacon>();
         try {
-            tipoBeacons = em.createQuery("from tipo_beacons t").getResultList();
+            tipoBeacons = em.createQuery("from TipoBeacon t").getResultList();
         } catch (Exception e) {
             System.err.println(e);
         } finally {

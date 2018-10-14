@@ -25,7 +25,7 @@ public class GrupoControle {
     @Column(name="idgrupo")
     private int id;
     private String descricao;
-    @OneToMany(fetch=FetchType.EAGER)
+    @OneToMany(fetch=FetchType.LAZY)
     @JoinColumn(name="idgrupo")
     private List<Pessoa> pessoasGrupo = new ArrayList<Pessoa>();
     @ManyToMany

@@ -22,7 +22,7 @@ public class Area {
     @Column(name="idarea")
     private int id;
     private String descricao;
-    @OneToMany(mappedBy = "areaBeacon", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "areaBeacon", fetch = FetchType.LAZY)
     private List<Beacon> beacons = new ArrayList<Beacon>();
     
     public int getId() {

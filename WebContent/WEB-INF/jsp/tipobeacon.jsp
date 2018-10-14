@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -87,7 +88,7 @@
                     
                     <h4 class="h5 text-center">Cadastro de Tipo de Beacon</h4>
                     
-	                <form method="post" action="adicionatipobeacon">
+	                <form method="post" action="/FindAnywhere/tipobeacon?acao=cadastro">
 	
 	                    <div class="form-group">
 	                        <label for="descricao">Descrição</label>
@@ -106,57 +107,7 @@
                 </div>
             </div>
             
-            <div class="table-responsive">
-            <table class="mt-3 table table table-striped">
-                <thead>
-                    <tr>
-                        <th>Descricao</th>
-                        <th>Layout</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    <tr>
-                        <td>AltBeacon</td>
-                        <td>m:2-3=REDACTED,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25</td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>AltBeacon</td>
-                        <td>m:2-3=REDACTED,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25</td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>AltBeacon</td>
-                        <td>m:2-3=REDACTED,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25</td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>AltBeacon</td>
-                        <td>m:2-3=REDACTED,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25</td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                    
-                </tbody>
-                
-            </table>
-            </div>
+            <c:import url="/tipobeacon?acao=listagem&view=tipobeacontabela.jsp"></c:import>
             
         </div>
     </section>
