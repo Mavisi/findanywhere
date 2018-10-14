@@ -9,11 +9,12 @@ import connection.ConnectionFactory;
 import model.TipoBeacon;
 
 public class TipoBeaconDAO {
-
-    private static EntityManager em = new ConnectionFactory().getConnection();
     
     @SuppressWarnings("unchecked")
     public List<TipoBeacon> getTiposBeacon() {
+        
+        EntityManager em = new ConnectionFactory().getConnection();
+        
         List<TipoBeacon> tipoBeacons = new ArrayList<TipoBeacon>();
         try {
             tipoBeacons = em.createQuery("from TipoBeacon t").getResultList();
@@ -27,6 +28,9 @@ public class TipoBeaconDAO {
     }
     
     public TipoBeacon getTipoBeacon(int id) {
+        
+        EntityManager em = new ConnectionFactory().getConnection();
+        
         TipoBeacon tipoBeacon = null;
         try {
             tipoBeacon = em.find(TipoBeacon.class, id); 
@@ -39,6 +43,9 @@ public class TipoBeaconDAO {
     }
     
     public void addTipoBeacon(TipoBeacon tipoBeacon) {
+        
+        EntityManager em = new ConnectionFactory().getConnection();
+        
         try {
             em.getTransaction().begin();
             em.persist(tipoBeacon);          
@@ -53,6 +60,9 @@ public class TipoBeaconDAO {
     }
     
     public void updateTipoBeacon(TipoBeacon tipoBeacon) {
+        
+        EntityManager em = new ConnectionFactory().getConnection();
+        
         try {
             em.getTransaction().begin();
             em.merge(tipoBeacon);
@@ -66,7 +76,11 @@ public class TipoBeaconDAO {
         
     }
     
-    public void deleteTipoBeacon(TipoBeacon tipoBeacon) {
+    public void deleteTipoBeacon(int id) {
+        
+        EntityManager em = new ConnectionFactory().getConnection();
+        TipoBeacon tipoBeacon = em.find(TipoBeacon.class, id);
+        
         try {
             em.getTransaction().begin();
             em.remove(tipoBeacon);

@@ -88,16 +88,16 @@
                     
                     <h4 class="h5 text-center">Cadastro de Tipo de Beacon</h4>
                     
-	                <form method="post" action="/FindAnywhere/tipobeacon?acao=cadastro">
+	                <form method="post" action="<c:url value="tipobeacon?acao=cadastro"/>">
 	
 	                    <div class="form-group">
 	                        <label for="descricao">Descrição</label>
-	                        <input class="form-control" type="text" name="descricao">    
+	                        <input class="form-control" type="text" name="descricao" required="required">    
 	                    </div>
 	
 	                    <div class="form-group">
 	                        <label for="layout">Layout</label>
-	                        <input class="form-control" type="text" name="layout">    
+	                        <input class="form-control" type="text" name="layout" required="required">    
 	                    </div>
 	                    
 	                    <div class="d-flex justify-content-end">

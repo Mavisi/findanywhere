@@ -10,13 +10,13 @@
     </thead>
     
     <tbody>
-        <c:forEach var="tipobeacon" items="${tipobeacons}">
+        <c:forEach var="tipoBeacon" items="${tipoBeacons}">
         <tr>
-            <td>${tipobeacon.descricao}</td>
-            <td>${tipobeacon.layout}</td>
+            <td>${tipoBeacon.descricao}</td>
+            <td>${tipoBeacon.layout}</td>
             <td>
-                <a href="#" class="btn btn-info">Editar</a>
-                <a href="#" class="btn btn-danger">Excluir</a>
+                <a href="tipobeacon?acao=obtencao&id=${tipoBeacon.id}&view=tipobeaconedicao.jsp" class="btn btn-info">Editar</a>
+                <a href="tipobeacon?acao=exclusao&id=${tipoBeacon.id}" class="btn btn-danger">Excluir</a>
             </td>
         </tr>
         </c:forEach>
