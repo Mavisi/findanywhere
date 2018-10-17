@@ -77,22 +77,21 @@
     
     <section>
         <div class="container mt-4">
-            <h1 class="h2">Áreas</h1>
-            
-            <a class="btn btn-primary mt-3" data-toggle="collapse" href="#cadastro" role="button" aria-expanded="false">
-                Cadastrar Área
-            </a>
         
-            <div class="collapse mt-2 col-md-6 mx-auto" id="cadastro">
+        <a href="<c:url value="area"/>">🡰 Voltar</a>
+                
+            <div class="mt-2 col-md-6 mx-auto" id="cadastro">
                 <div class="card card-body">
                     
-                    <h4 class="h5 text-center">Cadastro de Área</h4>
+                    <h4 class="h5 text-center">Edicão de Área</h4>
                     
                     <form method="post" action="<c:url value="area?acao=cadastro"/>">
+                    
+                    <input type="hidden" name="id" value="${area.id}">
     
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
-                            <input class="form-control" type="text" name="descricao">    
+                            <input class="form-control" type="text" name="descricao" value="${area.descricao}">    
                         </div>
                         
                         <div class="d-flex justify-content-end">
@@ -102,8 +101,6 @@
                 </div>
             </div>
             
-        <c:import url="/area?acao=listagem&view=areatabela.jsp"></c:import>
-                    
         </div>
     </section>
     

@@ -76,6 +76,7 @@ public class AreaDAO {
     }
     
     public void deleteArea(int id) {
+
         EntityManager em = new ConnectionFactory().getConnection();
         Area area = em.find(Area.class, id);
         
