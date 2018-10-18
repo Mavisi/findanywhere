@@ -14,7 +14,7 @@
         <c:forEach var="area" items="${areas}">
             <tr>
                 <td>${area.descricao}</td>
-                <td>${area.beacons}</td>
+                <td>${area.beaconsExtenso}</td>
                 <td>
                     <a href="area?acao=obtencao&id=${area.id}&view=areaedicao.jsp" class="btn btn-info">Editar</a>
                     <a href="area?acao=exclusao&id=${area.id}" class="btn btn-danger">Excluir</a>

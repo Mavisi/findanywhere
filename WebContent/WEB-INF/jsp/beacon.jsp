@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -88,47 +89,42 @@
                     
                     <h4 class="h5 text-center mb-4">Cadastro de Beacon</h4>
                     
-                    <form method="post" action="/">
+                    <form method="post" action="<c:url value="beacon?acao=cadastro"></c:url>">
 
                         <div class="form-group">
                             <label for="uuid">UUID</label>
-                            <input class="form-control" type="text" name="uuid">    
+                            <input class="form-control" type="text" name="uuid" required="required">    
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <input class="form-control" type="text" name="descricao" required="required">    
                         </div>
                         
                         <div class="form-group">
 	                        <label>Tipo do Beacon</label>
-							<select name="tipoBeacon" class="selectpicker" data-width="100%">
-								<option selected>Selecione</option>
-								<option value="1">AltBeacon</option>
-								<option value="2">iBeacon</option>
-								<option value="3">GodBeacon</option>
-							</select>  
+                            <c:import url="/tipobeacon?acao=listagem&view=tipobeaconselect.jsp"></c:import>                        
                         </div>
 
                         <div class="form-group">
                             <label>Área do Beacon</label>
-                            <select name="area" class="selectpicker" data-width="100%">
-                                <option selected>Selecione</option>
-                                <option value="1">Administração</option>
-                                <option value="2">Contabilidade</option>
-                                <option value="3">Almoxarifado</option>
-                            </select>  
+                            <c:import url="/area?acao=listagem&view=areaselect.jsp"></c:import>
                         </div>
                         
 
                         <div class="form-group">
                             <label for="major">Major</label>
-                            <input class="form-control" type="number" name="major">    
+                            <input class="form-control" type="number" name="major" required="required">    
                         </div>
 
                         <div class="form-group">
                             <label for="minor">Minor</label>
-                            <input class="form-control" type="number" name="minor">    
+                            <input class="form-control" type="number" name="minor" required="required">    
                         </div>
                         
                         <div class="form-group">
                             <label for="txPower">TX Power</label>
-                            <input class="form-control" type="number" name="txPower"> 
+                            <input class="form-control" type="number" name="txPower" required="required"> 
                         </div>
 
                         <div class="d-flex justify-content-end">
@@ -138,38 +134,7 @@
                 </div>
             </div>
             
-            <div class="table-responsive">
-            <table class="mt-3 table table table-striped">
-                <thead>
-                    <tr>
-                        <th>UUID</th>
-                        <th>Tipo do Beacon</th>
-                        <th>Área do Beacon</th>
-                        <th>Major</th>
-                        <th>Minor</th>
-                        <th>TxPower</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    <tr>
-                        <td>3d0ca315-aff9–4fc2-be61–3b76b9a2d798</td>
-                        <td>AltBeacon</td>
-                        <td>Administração</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>-65</td>
-                        <td>
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                </tbody>
-                
-            </table>
-            </div>
-            
+            <c:import url="/beacon?acao=listagem&view=beacontabela.jsp"></c:import>            
         </div>
     </section>
     

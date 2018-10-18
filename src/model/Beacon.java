@@ -17,9 +17,10 @@ public class Beacon {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="idbeacon")
     private int id;
+    private String descricao;
     @ManyToOne
     @JoinColumn(name="idtipo_beacon")
-    private TipoBeacon tipoBeacon;
+    private TipoBeacon tipoBeacon;    
     @ManyToOne
     @JoinColumn(name="idarea")
     private Area areaBeacon;
@@ -35,6 +36,12 @@ public class Beacon {
     }
     public void setId(int id) {
         this.id = id;
+    }
+    public String getDescricao() {
+        return descricao;
+    }
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
     public TipoBeacon getTipoBeacon() {
         return tipoBeacon;

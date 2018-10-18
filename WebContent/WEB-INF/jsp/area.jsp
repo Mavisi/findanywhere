@@ -92,7 +92,7 @@
     
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
-                            <input class="form-control" type="text" name="descricao">    
+                            <input class="form-control" type="text" name="descricao" required="required">    
                         </div>
                         
                         <div class="d-flex justify-content-end">

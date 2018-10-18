@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import connection.ConnectionFactory;
-import model.Area;
 import model.Beacon;
 
 public class BeaconDAO {

@@ -45,4 +45,22 @@ public class Area {
         this.beacons.add(beacon);
     }
     
+    public String getBeaconsExtenso() {
+        String beacons = "";
+        
+        for (Beacon beacon : this.beacons) {
+            if (this.beacons.indexOf(beacon) == this.beacons.size() - 1) {
+                beacons += beacon.getDescricao();
+            }
+            else if (this.beacons.indexOf(beacon) == this.beacons.size() - 2) {
+                beacons += beacon.getDescricao()+ " e ";
+            }
+            else {
+                beacons += beacon.getDescricao()+ ", ";
+            }
+        }
+        
+        return beacons;
+    }
+    
 }
