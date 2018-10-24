@@ -43,5 +43,36 @@ public class TipoPessoaDAO {
     
     }
     
+    public void addTipoPessoa(TipoPessoa tipoPessoa) {
+        
+        EntityManager em = new ConnectionFactory().getConnection();
+        
+        try {
+            em.getTransaction().begin();
+            em.persist(tipoPessoa);
+            em.getTransaction().commit();
+        }catch (Exception e) {
+            System.err.println(e);
+            em.getTransaction().rollback();
+        }finally {
+            em.close();
+        }
+    }
     
+    public void deleteTipoPessoa(int id) {
+     
+        EntityManager em = new ConnectionFactory().getConnection();
+        TipoPessoa tipoPessoa =  em.find(TipoPessoa.class, id);
+    
+        try {
+            em.getTransaction().begin();
+            em.remove(tipoPessoa);
+            em.getTransaction().commit();
+        }catch (Exception e) {
+            em.getTransaction().rollback();
+        }finally {
+            em.close();
+        }
+    }
 }
+

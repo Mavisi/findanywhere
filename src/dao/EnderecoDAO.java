@@ -11,6 +11,7 @@ import model.TipoBeacon;
 
 public class EnderecoDAO {
 
+    @SuppressWarnings("unchecked")
     public List<Endereco> getEnderecos() {
     
         EntityManager em =  new ConnectionFactory().getConnection();
